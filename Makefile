@@ -3,7 +3,10 @@ VERSION=0.0.1
 IMAGE_DEV=$(NAME)-dev
 
 image-dev:
-	docker build -t $(IMAGE_DEV):$(VERSION) -f Dockerfile.dev .
+	docker build \
+		--build-arg HTTP_PROXY=$(HTTP_PROXY) \
+		--build-arg HTTPS_PROXY=$(HTTPS_PROXY) \
+		-t $(IMAGE_DEV):$(VERSION) -f Dockerfile.dev .
 
 dev-env:
 	docker run -d --rm \
