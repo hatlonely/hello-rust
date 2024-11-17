@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
     tree \
     libssl-dev \
     openssl \
-    openssl-client \
+    openssh-client \
     unzip \
     pkg-config \
     docker.io
