@@ -43,10 +43,10 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # git 设置
 RUN git config --global --add safe.directory /app && \
- git config --global core.editor vim && \
- git config --global core.quotepath false && \
- git config --global core.precomposeunicode true && \
- git config --global i18n.commitEncoding utf-8 && \
- git config --global i18n.logOutputEncoding utf-8 && \
- git config --global i18n.statusOutputEncoding utf-8 && \
- git config --global gui.encoding utf-8
+    git config --global core.editor vim && \
+    git config --global core.quotepath false && \
+    git config --global core.precomposeunicode true && \
+    git config --global i18n.commitEncoding utf-8 && \
+    git config --global i18n.logOutputEncoding utf-8 && \
+    git config --global i18n.statusOutputEncoding utf-8 && \
+    git config --global gui.encoding utf-8
