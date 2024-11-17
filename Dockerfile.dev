@@ -18,9 +18,11 @@ ENV LC_ALL=zh_CN.UTF-8
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
+    wget \
     git \
     libssl-dev \
-    pkg-config
+    pkg-config \
+    docker.io
 
 # 安装 rust
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y

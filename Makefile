@@ -7,8 +7,10 @@ image-dev:
 
 dev-env:
 	docker run -d --rm \
-		--name $(IMAGE_DEV) \
+		--network host \
 		-v $(PWD):/app \
+		-v /var/run/docker.sock:/var/run/docker.sock \
 		-w /app \
+		--name $(IMAGE_DEV) \
 		$(IMAGE_DEV):$(VERSION) \
 		tail -f /dev/null
