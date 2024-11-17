@@ -20,7 +20,12 @@ RUN apt-get update && apt-get install -y \
     curl \
     wget \
     git \
+    jq \
+    tree \
     libssl-dev \
+    openssl \
+    openssl-client \
+    unzip \
     pkg-config \
     docker.io
 
