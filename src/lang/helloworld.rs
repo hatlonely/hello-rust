@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod tests {
     #[test]
-    fn hello_world() {
+    fn main() {
         println!("Hello, world!");
     }
 }
