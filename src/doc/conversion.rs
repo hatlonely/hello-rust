@@ -72,5 +72,47 @@ mod tests {
 
         assert_eq!(even, Ok(EvenNumber(8)));
         assert_eq!(odd, Err(()));
+
+        let even2: Result<EvenNumber, ()> = 6.try_into();
+        println!("even2: {:?}", even2);
+
+        assert_eq!(even2, Ok(EvenNumber(6)));
+    }
+
+    #[test]
+    fn convert_to_string() {
+        use std::fmt;
+        use std::str::FromStr;
+
+        #[derive(Debug)]
+        struct Point {
+            x: i32,
+            y: i32,
+        }
+
+        impl fmt::Display for Point {
+            fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+                write!(f, "({}, {})", self.x, self.y)
+            }
+        }
+
+        let point = Point { x: 3, y: 4 };
+        println!("point: {}", point);
+
+        impl FromStr for Point {
+            type Err = std::num::ParseIntError;
+
+            fn from_str(s: &str) -> Result<Self, Self::Err> {
+                let coords: Vec<&str> = s.trim_matches(|p| p == '(' || p == ')').split(',').collect();
+
+                let x_fromstr = coords[0].parse::<i32>()?;
+                let y_fromstr = coords[1].parse::<i32>()?;
+
+                Ok(Point { x: x_fromstr, y: y_fromstr })
+            }
+        }
+
+        let p = Point::from_str("(1,2)");
+        println!("p: {:?}", p);
     }
 }
