@@ -1,3 +1,5 @@
+// https://doc.rust-lang.org/rust-by-example/custom_types.html
+
 #[cfg(test)]
 mod tests {
     #[test]

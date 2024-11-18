@@ -1,3 +1,5 @@
+// https://doc.rust-lang.org/rust-by-example/conversion.html
+
 #[cfg(test)]
 mod tests {
 
@@ -103,12 +105,18 @@ mod tests {
             type Err = std::num::ParseIntError;
 
             fn from_str(s: &str) -> Result<Self, Self::Err> {
-                let coords: Vec<&str> = s.trim_matches(|p| p == '(' || p == ')').split(',').collect();
+                let coords: Vec<&str> = s
+                    .trim_matches(|p| p == '(' || p == ')')
+                    .split(',')
+                    .collect();
 
                 let x_fromstr = coords[0].parse::<i32>()?;
                 let y_fromstr = coords[1].parse::<i32>()?;
 
-                Ok(Point { x: x_fromstr, y: y_fromstr })
+                Ok(Point {
+                    x: x_fromstr,
+                    y: y_fromstr,
+                })
             }
         }
 

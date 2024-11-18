@@ -1,3 +1,5 @@
+// https://doc.rust-lang.org/rust-by-example/variable_bindings.html
+
 #[cfg(test)]
 mod tests {
     #[test]

@@ -1,3 +1,5 @@
+// https://doc.rust-lang.org/rust-by-example/types.html
+
 #[cfg(test)]
 mod tests {
     #[test]
@@ -10,7 +12,7 @@ mod tests {
 
         unsafe {
             let decimal = 300.0_f32;
-            let integer = decimal.to_int_unchecked::<u8>();  // 溢出
+            let integer = decimal.to_int_unchecked::<u8>(); // 溢出
             print!("Casting: {} -> {}", decimal, integer);
         }
     }
@@ -36,7 +38,7 @@ mod tests {
         let elem = 5u8;
 
         let mut vec = Vec::new();
-        vec.push(elem);  // 根据 `elem` 推断 `vec` 的类型
+        vec.push(elem); // 根据 `elem` 推断 `vec` 的类型
         println!("{:?}", vec);
     }
 
@@ -50,6 +52,11 @@ mod tests {
         let inches: Inch = 2 as u64;
 
         // 类型别名不提供额外的类型安全，因为别名不提供新的类型
-        println!("{} nanoseconds + {} inches = {} unit?", nanoseconds, inches, nanoseconds + inches);
+        println!(
+            "{} nanoseconds + {} inches = {} unit?",
+            nanoseconds,
+            inches,
+            nanoseconds + inches
+        );
     }
 }
