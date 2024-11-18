@@ -1,2 +1,2 @@
-mod lang;
+mod doc;
 mod std;
