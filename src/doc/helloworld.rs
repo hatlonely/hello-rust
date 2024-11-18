@@ -31,5 +31,11 @@ mod tests {
         println!("left justify: {n:0<5}", n = 1);
         println!("center justify: {n:0^5}", n = 1);
         println!("justify with variable: {n:0>width$}", n = 1, width = 5);
+
+        #[derive(Debug)]
+        #[allow(dead_code)]
+        struct Structure(i32);
+        println!("Structure {:?}", Structure(3));
+        println!("Structure {:#?}", Structure(3));
     }
 }
