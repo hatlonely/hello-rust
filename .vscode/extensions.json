@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "github.copilot",
+        "github.copilot-chat",
+        "hbenl.vscode-test-explorer",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.test-adapter-converter",
+        "rust-lang.rust-analyzer",
+        "serayuzgur.crates",
+        "swellaby.rust-pack",
+        "swellaby.vscode-rust-test-adapter",
+        "tamasfe.even-better-toml",
+        "unthrottled.doki-theme",
+    ]
+}
