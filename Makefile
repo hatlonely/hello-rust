@@ -13,6 +13,7 @@ dev-env:
 		--network host \
 		-v $(PWD):/app \
 		-v /var/run/docker.sock:/var/run/docker.sock \
+		-v $(HOME)/.ssh:/root/.ssh \
 		-w /app \
 		--name $(IMAGE_DEV) \
 		$(IMAGE_DEV):$(VERSION) \
