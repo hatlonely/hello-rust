@@ -4,3 +4,7 @@ version = "0.0.0"
 edition = "2021"
 
 [dependencies]
+
+[[bin]]
+name = "hello_rust"
+path = "bin/hello_rust.rs"
