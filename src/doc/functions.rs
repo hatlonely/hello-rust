@@ -60,14 +60,5 @@ mod tests {
         let num = 5;
         let plus_num = |x: i32| x + num;
         println!("plus_num(1): {}", plus_num(1));
-
-        let mut num = 5;
-        {
-            let plus_num = |x: i32| x + num;
-            println!("plus_num(1): {}", plus_num(1));
-        }
-
-        let plus_num = |x: i32, y: i32| x + y;
-        println!("plus_num(1, 2): {}", plus_num(1, 2));
     }
 }
