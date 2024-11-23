@@ -18,3 +18,9 @@ dev-env:
 		--name $(IMAGE_DEV) \
 		$(IMAGE_DEV):$(VERSION) \
 		tail -f /dev/null
+
+release:
+	cargo build --release
+
+build:
+	cargo build
