@@ -570,7 +570,9 @@ version = "0.0.0"
 dependencies = [
  "anyhow",
  "futures",
+ "http-body-util",
  "hyper",
+ "hyper-util",
  "jsonrpsee",
  "prost",
  "serde",

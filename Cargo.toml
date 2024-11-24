@@ -6,7 +6,9 @@ edition = "2021"
 [dependencies]
 anyhow = "1.0.93"
 futures = "0.3.31"
+http-body-util = "0.1.2"
 hyper = { version = "1.5.1", features = ["full"] }
+hyper-util = "0.1.10"
 jsonrpsee = { version = "0.24.7", features = ["full"] }
 prost = "0.13.3"
 serde = { version = "1.0.215", features = ["derive"] }
@@ -41,3 +43,7 @@ path = "bin/tarpc/server.rs"
 [[bin]]
 name = "tarpc_client"
 path = "bin/tarpc/client.rs"
+
+[[bin]]
+name = "hyper_server"
+path = "bin/hyper/server.rs"
