@@ -32,3 +32,11 @@ path = "bin/tonic/server.rs"
 [[bin]]
 name = "tonic_client"
 path = "bin/tonic/client.rs"
+
+[[bin]]
+name = "tarpc_server"
+path = "bin/tarpc/server.rs"
+
+[[bin]]
+name = "tarpc_client"
+path = "bin/tarpc/client.rs"
