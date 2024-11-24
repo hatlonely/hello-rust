@@ -1,3 +1,4 @@
+mod channels;
 mod hashmap;
 mod memory;
 mod option;
