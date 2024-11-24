@@ -5,4 +5,5 @@ mod panic;
 mod rc;
 mod result;
 mod strings;
+mod threads;
 mod vectors;
