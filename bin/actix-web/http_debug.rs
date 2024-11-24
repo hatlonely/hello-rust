@@ -2,6 +2,7 @@ use actix_web::{web, App, HttpRequest, HttpResponse, HttpServer, Responder};
 
 async fn index(req: HttpRequest, req_body: String) -> impl Responder {
     println!("====================================");
+    println!("method: {:?}", req.method());
     println!("uri: {:?}", req.uri());
     println!("headers:");
     for (name, value) in req.headers() {
