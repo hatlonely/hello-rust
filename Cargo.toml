@@ -11,6 +11,9 @@ serde_json = "1.0.133"
 tokio = { version = "1.41.1", features = ["full"] }
 tonic = "0.12.3"
 
+[build-dependencies]
+tonic-build = "0.12.3"
+
 [[bin]]
 name = "hello_rust"
 path = "bin/hello_rust.rs"
@@ -18,3 +21,11 @@ path = "bin/hello_rust.rs"
 [[bin]]
 name = "jsonrpsee_http"
 path = "bin/jsonrpsee/http.rs"
+
+[[bin]]
+name = "tonic_server"
+path = "bin/tonic/server.rs"
+
+# [[bin]]
+# name = "helloworld_client"
+# path = "bin/helloworld/client.rs"
