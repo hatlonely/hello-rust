@@ -2,7 +2,6 @@
 
 #[cfg(test)]
 mod tests {
-
     #[test]
     fn test_hashmap() {
         use std::collections::HashMap;
