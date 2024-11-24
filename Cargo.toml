@@ -57,3 +57,7 @@ path = "bin/actix-web/server.rs"
 [[bin]]
 name = "rocket_server"
 path = "bin/rocket/server.rs"
+
+[[bin]]
+name = "actix_http_debug"
+path = "bin/actix-web/http_debug.rs"
