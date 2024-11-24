@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.93"
+futures = "0.3.31"
 jsonrpsee = { version = "0.24.7", features = ["full"] }
 prost = "0.13.3"
 serde = { version = "1.0.215", features = ["derive"] }
