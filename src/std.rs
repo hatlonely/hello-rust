@@ -4,6 +4,7 @@ mod memory;
 mod option;
 mod panic;
 mod path;
+mod processes;
 mod rc;
 mod result;
 mod strings;
