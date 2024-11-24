@@ -1,3 +1,4 @@
+mod hashmap;
 mod memory;
 mod option;
 mod panic;
