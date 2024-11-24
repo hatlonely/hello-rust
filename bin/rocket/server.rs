@@ -22,6 +22,17 @@ fn json(message: Json<Message>) -> String {
     format!("Message: {}", message.message)
 }
 
+#[derive(FromForm)]
+struct Query {
+    name: String,
+    age: u8,
+}
+
+#[get("/query?<params..>")]
+fn query(params: Query) -> String {
+    format!("Name: {}, Age: {}", params.name, params.age)
+}
+
 #[launch]
 fn rocket() -> _ {
     rocket::build()
@@ -29,4 +40,6 @@ fn rocket() -> _ {
         .mount("/", routes![hello_world])
         // curl -XPOST -d '{"message": "hello"}' "127.0.0.1:8000/json"
         .mount("/", routes![json])
+        // curl -XGET "127.0.0.1:8000/query?name=John&age=20"
+        .mount("/", routes![query])
 }
