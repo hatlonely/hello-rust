@@ -1,4 +1,5 @@
 mod channels;
+mod foreign;
 mod hashmap;
 mod memory;
 mod option;
