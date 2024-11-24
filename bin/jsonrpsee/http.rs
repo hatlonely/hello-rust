@@ -13,13 +13,13 @@ struct EchoResponse {
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let server = Server::builder().build("127.0.0.1:8081").await?;
+    let server = Server::builder().build("127.0.0.1:8080").await?;
 
     let mut module = RpcModule::new(());
 
     // curl -X POST -H "Content-Type: application/json" \
     //   -d '{"jsonrpc":"2.0","method":"say_hello","params":[],"id":1}' \
-    //   http://127.0.0.1:8081
+    //   http://127.0.0.1:8080
     module.register_method("say_hello", |_, _, _| {
         println!("say_hello method called!");
         "Hello there!!"
@@ -27,7 +27,7 @@ async fn main() -> anyhow::Result<()> {
 
     // curl -X POST -H "Content-Type: application/json" \
     //   -d '{"jsonrpc":"2.0","method":"echo","params":{"message":"hatlonely"},"id":1}' \
-    //   http://127.0.0.1:8081
+    //   http://127.0.0.1:8080
     module.register_method("echo", |params, _, _| {
         let request: EchoRequest = serde_json::from_str(params.as_str().unwrap()).unwrap();
         let response = EchoResponse {

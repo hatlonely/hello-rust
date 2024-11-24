@@ -10,7 +10,7 @@ pub trait World {
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let addr = (IpAddr::V4(Ipv4Addr::LOCALHOST), 50051);
+    let addr = (IpAddr::V4(Ipv4Addr::LOCALHOST), 8080);
     let mut transport = tarpc::serde_transport::tcp::connect(addr, Json::default);
     transport.config_mut().max_frame_length(usize::MAX);
 

@@ -26,7 +26,7 @@ async fn spawn(fut: impl Future<Output = ()> + Send + 'static) {
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let addr = (IpAddr::V4(Ipv4Addr::LOCALHOST), 50051);
+    let addr = (IpAddr::V4(Ipv4Addr::LOCALHOST), 8080);
     let mut listener = tarpc::serde_transport::tcp::listen(addr, Json::default).await?;
 
     listener.config_mut().max_frame_length(usize::MAX);
