@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 anyhow = "1.0.93"
 jsonrpsee = { version = "0.24.7", features = ["full"] }
+prost = "0.13.3"
 serde = { version = "1.0.215", features = ["derive"] }
 serde_json = "1.0.133"
 tokio = { version = "1.41.1", features = ["full"] }
@@ -26,6 +27,6 @@ path = "bin/jsonrpsee/http.rs"
 name = "tonic_server"
 path = "bin/tonic/server.rs"
 
-# [[bin]]
-# name = "helloworld_client"
-# path = "bin/helloworld/client.rs"
+[[bin]]
+name = "tonic_client"
+path = "bin/tonic/client.rs"
